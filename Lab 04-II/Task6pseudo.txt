@@ -1,0 +1,25 @@
+Start 
+    Pkg = 99
+
+    DISPLAY "Enter the number of packages purchased: "
+    READ quantity
+
+    discountRate = 0
+
+    IF quantity is greater than or equal to 10 AND quantity is less than or equal to 19 THEN
+        discountRate = 0.20
+    ELSE IF quantity is greater than or equal to 20 AND quantity is less than or equal to 49 THEN
+        discountRate = 0.30
+    ELSE IF quantity is greater than or equal to 50 AND quantity is less than or equal to 99 THEN
+        discountRate = 0.40
+    ELSE IF quantity is greater than or equal to 100 THEN
+        discountRate = 0.50
+    END IF
+
+    totalBeforeDiscount = quantity * Pkg
+    discountAmount = totalBeforeDiscount * discountRate
+    totalAfterDiscount = totalBeforeDiscount - discountAmount
+
+    DISPLAY "Discount amount: $" + discountAmount
+    DISPLAY "Total after discount: $" + totalAfterDiscount
+END

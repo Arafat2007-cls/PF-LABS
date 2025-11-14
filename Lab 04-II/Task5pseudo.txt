@@ -1,0 +1,17 @@
+Start 
+    DISPLAY "Enter the weight of the package in pounds: "
+    READ weight
+
+    IF weight is less than or equal to 2 THEN
+        rate = 1.10
+    ELSE IF weight is greater than 2 AND weight is less than or equal to 6 THEN
+        rate = 2.20
+    ELSE IF weight is greater than 6 AND weight is less than or equal to 10 THEN
+        rate = 3.70
+    ELSE
+        rate = 3.80
+    END IF
+
+    totalCharge = weight * rate
+    DISPLAY "The shipping charge is $" + totalCharge
+END
